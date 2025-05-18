@@ -20,12 +20,21 @@ type Transaksi struct {
     Jenis     string // beli atau jual
 }
 
-var daftarSaham = []Saham{
-    {"BBCA", "Bank BCA", 8500, 0},
-    {"TLKM", "Telkom Indonesia", 4200, 0},
-    {"BBRI", "Bank BRI", 5100, 0},
-    {"UNVR", "Unilever", 4100, 0},
-}
+func BaruAplikasi() *Aplikasi {
+	saham := []Saham{
+		{"BBCA", "Bank Central Asia Tbk.", 8800.00, 1500000},
+		{"TLKM", "Telekomunikasi Indonesia Tbk.", 3500.00, 2000000},
+		{"BMRI", "Bank Mandiri (Persero) Tbk.", 7300.00, 1200000},
+		{"ASII", "Astra International Tbk.", 6200.00, 900000},
+		{"BBRI", "Bank Rakyat Indonesia (Persero) Tbk.", 4100.00, 1700000},
+		{"UNVR", "Unilever Indonesia Tbk.", 42000.00, 300000},
+		{"ICBP", "Indofood CBP Sukses Makmur Tbk.", 10200.00, 400000},
+		{"HMSP", "HM Sampoerna Tbk.", 12500.00, 600000},
+		{"EXCL", "XL Axiata Tbk.", 2800.00, 1000000},
+		{"PGAS", "Perusahaan Gas Negara Tbk.", 2700.00, 1100000},
+		{"GGRM", "Gudang Garam Tbk.", 61000.00, 250000},
+		{"MEDC", "Medco Energi Internasional Tbk.", 1200.00, 1800000},
+	}
 
 var portofolio = make(map[string]int)
 var riwayatTransaksi []Transaksi
