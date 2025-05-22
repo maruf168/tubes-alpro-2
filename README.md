@@ -10,21 +10,26 @@
 
 ### Deskripsi Program
 
-Aplikasi yang dikembangkan menggunakan bahasa pemrograman Go (Golang) ini adalah sebuah simulasi pasar saham virtual berbasis teks yang bertujuan untuk memberikan pengalaman belajar investasi saham secara sederhana dan interaktif bagi pengguna, khususnya mahasiswa dan pemula.
-Aplikasi ini menggunakan struktur data array dan slice untuk menyimpan data saham dan mendukung fitur dasar pencarian dan pengurutan untuk memudahkan pengelolaan data saham.
-Fitur utama aplikasi meliputi pendaftaran data saham (kode saham, nama perusahaan, harga, jumlah saham), pengelolaan data saham seperti mengubah dan menghapus data, serta pencarian saham menggunakan metode Sequential Search.
-Pengurutan data dilakukan menggunakan algoritma dasar seperti Selection Sort atau Insertion Sort pada salah satu kriteria, misalnya berdasarkan harga atau nama perusahaan.
-Aplikasi menggunakan menu interaktif berbasis teks yang sederhana dan mudah dipahami, dengan validasi input dasar untuk menjaga kelancaran penggunaan. Fitur beli dan jual saham, laporan portofolio, dan pencarian lanjutan seperti Binary Search masih dapat dikembangkan pada versi selanjutnya.
+Aplikasi yang dikembangkan menggunakan bahasa pemrograman Go (Golang) ini adalah sebuah simulasi pasar saham virtual berbasis teks yang bertujuan untuk memberikan pengalaman belajar investasi saham yang praktis dan interaktif bagi pengguna, khususnya mahasiswa dan pemula yang ingin memahami mekanisme pasar saham tanpa mengambil risiko nyata. Data saham dan transaksi disimpan dalam struktur data array dan slice, dan mereka memiliki fitur pencarian dan pengurutan untuk membuatnya lebih mudah untuk diurus.
+
+           Fitur utama aplikasi meliputi pendaftaran dan pengelolaan portofolio saham virtual, simulasi transaksi beli dan jual saham, serta monitoring harga saham secara dinamis. Pengguna dapat melihat daftar saham yang tersedia, melihat histori transaksi, dan mendapatkan laporan ringkas tentang performa portofolio mereka. Selain itu, aplikasi menyediakan dua metode pencarian saham, Sequential Search dan Binary Search, yang dapat digunakan sesuai kebutuhan. Selain itu, data saham dapat diurutkan berdasarkan harga saham atau nama perusahaan dengan menggunakan algoritma Sorting Selection dan Insertion.
+Menu interaktif berbasis teks yang mudah dipahami dan dioperasikan, dengan validasi input yang memadai untuk memastikan kelancaran penggunaan, memungkinkan sistem untuk mengelola setiap fungsi secara terpisah dan efisien.
+
 
 ### Fitur
 
 1.	Tambah Data Saham: Pengguna dapat memasukkan informasi kode saham, nama perusahaan, harga saham, dan jumlah saham yang tersedia.
 2.	Ubah Data Saham: Memungkinkan pengguna memperbarui informasi saham yang sudah terdaftar.
 3.	Hapus Data Saham: Menghapus data saham tertentu dari daftar.
-4.	Pencarian Data: 
-      •	Sequential Search untuk mencari saham berdasarkan nama perusahaan.
-        (Biasanya belum ada Binary Search karena butuh data yang terurut dan fungsi sorting yang lengkap). 
-5.	Pengurutan Data:
-      •	Mungkin baru ada satu metode sorting saja, misal Selection Sort untuk harga atau Insertion Sort untuk nama, tapi belum keduanya.
-6.	Menu Interaktif: Menyediakan navigasi menu dasar untuk mengakses fitur aplikasi.
-7.	Keluar: Menghentikan program
+4.	Beli dan Jual Saham: Simulasi transaksi pembelian dan penjualan saham oleh pengguna dengan pembaruan portofolio secara real-time.
+5.	Pencarian Data: 
+     •   Sequential Search untuk mencari saham berdasarkan nama perusahaan, 
+     •   Binary Search untuk mencari saham berdasarkan kode saham (dengan data sudah terurut terlebih dahulu).
+6.	Pengurutan Data:
+     •    Selection Sort untuk mengurutkan saham berdasarkan harga dari tertinggi ke terendah.
+     •    Insertion Sort untuk mengurutkan berdasarkan nama perusahaan secara alfabetis.
+7.	Laporan Portofolio: Menampilkan ringkasan performa saham yang dimiliki pengguna, termasuk total nilai investasi dan keuntungan/kerugian.
+8.	Tampilan Data Lengkap: Menampilkan seluruh data saham dan histori transaksi dalam format yang mudah dibaca.
+9.	Menu Interaktif: Menyediakan navigasi menu yang mudah diikuti untuk mengakses berbagai fitur aplikasi.
+10.	Keluar: Menghentikan program
+
