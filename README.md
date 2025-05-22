@@ -18,18 +18,18 @@ Menu interaktif berbasis teks yang mudah dipahami dan dioperasikan, dengan valid
 
 ### Fitur
 
-1.	Tambah Data Saham: Pengguna dapat memasukkan informasi kode saham, nama perusahaan, harga saham, dan jumlah saham yang tersedia.
-2.	Ubah Data Saham: Memungkinkan pengguna memperbarui informasi saham yang sudah terdaftar.
-3.	Hapus Data Saham: Menghapus data saham tertentu dari daftar.
-4.	Beli dan Jual Saham: Simulasi transaksi pembelian dan penjualan saham oleh pengguna dengan pembaruan portofolio secara real-time.
-5.	Pencarian Data: 
-     •   Sequential Search untuk mencari saham berdasarkan nama perusahaan, 
-     •   Binary Search untuk mencari saham berdasarkan kode saham (dengan data sudah terurut terlebih dahulu).
+1.     Tambah Data Saham: Pengguna dapat memasukkan informasi kode saham, nama perusahaan, harga saham, dan jumlah saham yang tersedia.
+2.     Ubah Data Saham: Memungkinkan pengguna memperbarui informasi saham yang sudah terdaftar.
+3.     Hapus Data Saham: Menghapus data saham tertentu dari daftar.
+4.     Beli dan Jual Saham: Simulasi transaksi pembelian dan penjualan saham oleh pengguna dengan pembaruan portofolio secara real-time.
+5.     Pencarian Data: 
+       •   Sequential Search untuk mencari saham berdasarkan nama perusahaan, 
+       •   Binary Search untuk mencari saham berdasarkan kode saham (dengan data sudah terurut terlebih dahulu).
 6.	Pengurutan Data:
-     •    Selection Sort untuk mengurutkan saham berdasarkan harga dari tertinggi ke terendah.
-     •    Insertion Sort untuk mengurutkan berdasarkan nama perusahaan secara alfabetis.
-7.	Laporan Portofolio: Menampilkan ringkasan performa saham yang dimiliki pengguna, termasuk total nilai investasi dan keuntungan/kerugian.
-8.	Tampilan Data Lengkap: Menampilkan seluruh data saham dan histori transaksi dalam format yang mudah dibaca.
-9.	Menu Interaktif: Menyediakan navigasi menu yang mudah diikuti untuk mengakses berbagai fitur aplikasi.
-10.	Keluar: Menghentikan program
+       •    Selection Sort untuk mengurutkan saham berdasarkan harga dari tertinggi ke terendah.
+       •    Insertion Sort untuk mengurutkan berdasarkan nama perusahaan secara alfabetis.
+7.     Laporan Portofolio: Menampilkan ringkasan performa saham yang dimiliki pengguna, termasuk total nilai investasi dan keuntungan/kerugian.
+8.     Tampilan Data Lengkap: Menampilkan seluruh data saham dan histori transaksi dalam format yang mudah dibaca.
+9.     Menu Interaktif: Menyediakan navigasi menu yang mudah diikuti untuk mengakses berbagai fitur aplikasi.
+10.    Keluar: Menghentikan program
 
