@@ -3,7 +3,7 @@ package main
 import (
     "fmt"
     "strconv"
-    "strings"
+	 "strings"
 )
 
 func (app *Aplikasi) tambahTransaksi() {
@@ -70,7 +70,7 @@ func (app *Aplikasi) ubahTransaksi() {
         if tx.IsBeli {
             jenis = "Beli"
         }
-        fmt.Printf("%d) %s %d saham %s @%s\n", i+1, jenis, tx.Jumlah, tx.KodeSaham, formatRupiah(tx.Harga))
+        fmt.Printf("%d) %s %d saham %s %s\n", i+1, jenis, tx.Jumlah, tx.KodeSaham, formatRupiah(tx.Harga))
     }
     fmt.Print("Pilih nomor transaksi yang ingin diubah: ")
     input := app.bacaInput()
@@ -83,7 +83,7 @@ func (app *Aplikasi) ubahTransaksi() {
 
     tx := &app.Portofolio.Transaksi[idx]
 
-    fmt.Printf("Transaksi terpilih: %s %d saham %s @%s\n",
+    fmt.Printf("Transaksi terpilih: %s %d saham %s %s\n",
         func() string {
             if tx.IsBeli {
                 return "Beli"
@@ -193,7 +193,7 @@ func (app *Aplikasi) hapusTransaksi() {
         if tx.IsBeli {
             jenis = "Beli"
         }
-        fmt.Printf("%d) %s %d saham %s @%s\n", i+1, jenis, tx.Jumlah, tx.KodeSaham, formatRupiah(tx.Harga))
+        fmt.Printf("%d) %s %d saham %s %s\n", i+1, jenis, tx.Jumlah, tx.KodeSaham, formatRupiah(tx.Harga))
     }
     fmt.Print("Pilih nomor transaksi yang ingin dihapus: ")
     input := app.bacaInput()
