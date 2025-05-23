@@ -40,7 +40,7 @@ func BaruAplikasi() *Aplikasi {
 		reader: bufio.NewReader(os.Stdin),
 	}
 
-	// Mengganti sort.Slice dengan Insertion Sort manual
+	
 	app.insertionSortByKode()
 	return app
 }
