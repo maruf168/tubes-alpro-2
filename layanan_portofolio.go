@@ -12,7 +12,6 @@ func (app *Aplikasi) tampilkanPortofolio() {
         return
     }
 
-   
     pegang := make(map[string]int)
     for _, tx := range app.Portofolio.Transaksi {
         if tx.IsBeli {
@@ -22,7 +21,6 @@ func (app *Aplikasi) tampilkanPortofolio() {
         }
     }
 
-	
     for kode, jumlah := range pegang {
         if jumlah <= 0 {
             delete(pegang, kode)
@@ -33,13 +31,12 @@ func (app *Aplikasi) tampilkanPortofolio() {
     fmt.Printf("%-8s %-25s %-10s %-15s\n", "Kode", "Nama Perusahaan", "Jumlah", "Nilai Saat Ini")
     for kode, jumlah := range pegang {
         idx := app.cariSahamByKodeBinary(kode)
-        if idx == -1 {
-            continue
+        if idx != -1 {
+            s := app.Saham[idx]
+            nilai := s.Harga * float64(jumlah)
+            totalNilai += nilai
+            fmt.Printf("%-8s %-25s %-10d %s\n", s.Kode, s.NamaPerusahaan, jumlah, formatRupiah(nilai))
         }
-        s := app.Saham[idx]
-        nilai := s.Harga * float64(jumlah)
-        totalNilai += nilai
-        fmt.Printf("%-8s %-25s %-10d %s\n", s.Kode, s.NamaPerusahaan, jumlah, formatRupiah(nilai))
     }
 
     fmt.Println("Total nilai portofolio saham:", formatRupiah(totalNilai))
@@ -90,17 +87,16 @@ func (app *Aplikasi) tampilkanStatistikUntungRugi() {
             untung = (rataJual - rataBeli) * float64(s.TotalJualJumlah)
         }
         idx := app.cariSahamByKodeBinary(kode)
-        if idx == -1 {
-            continue
+        if idx != -1 {
+            fmt.Printf("%-8s %-25s %s %s %s\n",
+                kode,
+                app.Saham[idx].NamaPerusahaan,
+                formatRupiah(rataBeli),
+                formatRupiah(rataJual),
+                formatRupiah(untung),
+            )
+            totalUntung += untung
         }
-        fmt.Printf("%-8s %-25s %s %s %s\n",
-            kode,
-            app.Saham[idx].NamaPerusahaan,
-            formatRupiah(rataBeli),
-            formatRupiah(rataJual),
-            formatRupiah(untung),
-        )
-        totalUntung += untung
     }
     fmt.Println("Total untung/rugi dari penjualan:", formatRupiah(totalUntung))
 }
