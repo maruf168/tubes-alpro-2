@@ -71,7 +71,7 @@ func (app *Aplikasi) menuUrutSaham() {
 	fmt.Print("Pilih metode (1-4): ")
 	input := app.bacaInput()
 
-	// Simpan data asli untuk reset
+	
 	backupSaham := make([]Saham, len(app.Saham))
 	copy(backupSaham, app.Saham)
 
@@ -103,9 +103,9 @@ func (app *Aplikasi) menuUrutSaham() {
 	}
 }
 
-// ===== Algoritma Sorting Manual =====
 
-// Selection Sort (Harga Tertinggi → Terendah)
+
+
 func (app *Aplikasi) selectionSortHargaDescending() {
 	n := len(app.Saham)
 	for i := 0; i < n-1; i++ {
@@ -119,7 +119,7 @@ func (app *Aplikasi) selectionSortHargaDescending() {
 	}
 }
 
-// Insertion Sort (Harga Tertinggi → Terendah)
+
 func (app *Aplikasi) insertionSortHargaDescending() {
 	for i := 1; i < len(app.Saham); i++ {
 		key := app.Saham[i]
@@ -132,7 +132,7 @@ func (app *Aplikasi) insertionSortHargaDescending() {
 	}
 }
 
-// Selection Sort (Volume Tertinggi → Terendah)
+
 func (app *Aplikasi) selectionSortVolumeDescending() {
 	n := len(app.Saham)
 	for i := 0; i < n-1; i++ {
@@ -146,7 +146,7 @@ func (app *Aplikasi) selectionSortVolumeDescending() {
 	}
 }
 
-// Insertion Sort (Volume Tertinggi → Terendah)
+
 func (app *Aplikasi) insertionSortVolumeDescending() {
 	for i := 1; i < len(app.Saham); i++ {
 		key := app.Saham[i]
@@ -159,7 +159,7 @@ func (app *Aplikasi) insertionSortVolumeDescending() {
 	}
 }
 
-// Insertion Sort untuk mengembalikan urutan Kode (A → Z)
+
 func (app *Aplikasi) insertionSortByKode() {
 	for i := 1; i < len(app.Saham); i++ {
 		key := app.Saham[i]
